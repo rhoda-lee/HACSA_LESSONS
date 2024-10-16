@@ -1,0 +1,115 @@
+Variiables are containers for data. They are also identifiers for data
+They are available across all programming languages.
+
+There are two types of variables.
+1. System defined variables
+2. User defined variables
+
+System defined variables or environmental variables
+    These are variables that come with the system
+    eg: "$HOME", 
+    "$SHELL", 
+    "$PATH" It holds a list of directories in which the shell looks for executable files whenever a command is run
+    "$USER" It stores the name of the current user
+    "$PWD" This prints the current working directory
+    "$OLDPWD" Stores the previous working directory
+    "$LANG" Shows current language being used
+    "$LOGNAME"
+    "$HOSTNAME" This shows the name of the laptop
+To see all system variables use command: 
+printenv
+
+These kind of variables can be temp modified but the changes apply only to the current shell session. 
+Upon killing the terminal, changes will be lost.
+use command: export the-variable new-data
+eg: export NAME="Michaela"
+    echo $NAME
+
+
+User defined variable or local variable
+    These are variables defined or creted by the user to store data.
+    Syntax: variable_name=value
+    eg: name="Rhoda Lee"
+
+I added a script called variable.sh" in the Bsh_Scripting folder.
+This script when run, creates a variable called name, assigns it with a value 
+and prints it to the terminal with a message
+
+#!/bin/bash
+
+name="Rhoda Lee"
+program="Tech4Girls"
+region="Greater Accra Region"
+hobby="read and write"
+num_of_siblings=3
+laptop_name=$NAME
+
+echo " Hello my name is $name! Nice to meet you
+I am a $program scholar and I live in a town in the $region. 
+I love to $hobby when I am at home. I have $num_of_siblings other siblings. The name of my laptop is $laptop_name"
+
+
+
+ARITHMETICS IN BASH
+Syntax:
+$((n1 + n2))
+ie; variable_name=$((n1 + n2))
+
+#!/bin/bash
+
+# Syntax: $((n1 + n2))
+
+sum=$((7+8))
+echo "The sum of 7 and 8 is: $sum"
+
+# Also, you can use:
+a=10
+echo "a is $a"
+b=2
+echo "b is $b"
+
+addition=$((a+b))
+echo "Sum of a and b: $addition"
+
+# Subtraction
+difference=$((a-b))
+echo "Difference of a and b: $difference"
+
+# Division
+division=$((a/b))
+echo "a divided by b: $division"
+
+# Multiplication
+multiple=$((a*b))
+echo "a multiplied by b: $multiple"
+
+# Modulos
+c=10
+echo "c is $c"
+d=3
+echo "d is $d"
+
+modulos=$((c%d))
+echo "c modulos d: $modulos"
+
+# For multiplication use: "*"
+# For division use: "/"
+# For modulos use: "%"
+# For exponentiation or power use: "**"
+
+THE READ COMMAND
+It is used to read user input from the terminal
+read command
+
+eg:
+
+echo "What is your name? "
+read name
+
+echo "Hello $name"
+
+"-p" is used to read from multiple lines
+eg:
+read -p "Enter your firstname and lastname" firstname lastname
+echo $firstname
+echo $lastname
