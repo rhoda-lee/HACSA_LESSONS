@@ -113,3 +113,37 @@ eg:
 read -p "Enter your firstname and lastname" firstname lastname
 echo $firstname
 echo $lastname
+
+## Positional arguments in Bash Bash_Scripting
+Positional arguments allow input values from the from the CLI 
+$0 - script's name or first argument
+$1 - second argument
+$2 - third argument
+
+echo "Hello $0
+
+LOGICAL OPERATORS
+Logical OR = || or -o
+Logical AND = && or -a
+Logical NOT = !
+
+CONTROL FLOW
+If statement
+An if statement is used to eveluate a condition and decide on what action to take when that condition happens.
+
+SYNTAX
+if [ condition]
+    then
+        statement
+fi
+
+LOOPS IN BASH
+They are used to execute a list of commands repeatedly until a certain condition is met
+
+WHILE LOOPS
+while [ condition ]
+do
+    [ command ]
+    [ command ]
+    [ command ]
+done
