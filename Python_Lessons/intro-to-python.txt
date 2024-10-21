@@ -1,0 +1,29 @@
+Python is a high-level programming language that has a syntax similar to english language.
+It is beginner friendly and versatile.
+Can be used for:
+1. Web dev
+2. Desktop application
+3. Machine learning
+4. Scripting
+5. Data Science and Analytics
+
+type 'python3' to enter the python interpreter in the terminal
+To exit the interpreter, type'exit()' or use 'Ctrl + D'
+
+Install pep8
+
+Functions
+print() - print to the console
+len() - print the length or total number of characters of a variable
+
+Methods
+.lower() - changes all letters to lower case
+.upper() - changes all letters to upper case
+.count() - count the number of occurences of the argument passed
+.find() - used to find the starting index of the argument passed
+
+Indexing
+- Counting by positional index
+
+String Concatenation
+
