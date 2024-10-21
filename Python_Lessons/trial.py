@@ -26,7 +26,7 @@ print(my_string.lower())
 
 print(my_string.count("e"))
 
-print(my_string[15])
+print(my_string.find("Backend"))
 
 print(my_string.replace("Backend", "Frontend"))
 
