@@ -12,18 +12,74 @@ To exit the interpreter, type'exit()' or use 'Ctrl + D'
 
 Install pep8
 
+Data Types
+    String
+    Integer
+    Float 
+    Boolean
+    Object
+
 Functions
 print() - print to the console
 len() - print the length or total number of characters of a variable
+type() - prints the data type of a value or variable: str, int, float ...
+dir() - function used to print all the methods available to a datatype
+Numeric Functions
+    abs() - changes negatives values into positive values
+    round() - rounds a float to the nearest whole number. 
+    It can take two arguments, the value and how many decimal places you want the function to round up to.
+Type Casting
+There are two ways of changing the data type of a value.
+Implicit and Explicit Conversions
+
+- Implicit conversion is when the pyhton interpreter automatically does the type conversion for us.
+Adding an integer and a floating point number is possible because of implicit type conversion.
+
+- Explicit type conversion is when we convert the type ourselves using the functions below.
+    int() - for explicit conversion of a value to an integer data type
+    str() -  for explicit conversion of a value to a string data type
+    float() - for explicit conversion of a value to a float data type
+
 
 Methods
 .lower() - changes all letters to lower case
 .upper() - changes all letters to upper case
 .count() - count the number of occurences of the argument passed
 .find() - used to find the starting index of the argument passed
+.join() - used to join strings by a delimeter from a list into one string
 
 Indexing
 - Counting by positional index
 
 String Concatenation
 
+
+Numerical Data
+- integers
+- floats
+Arithmetic
+- "-"
+- "+"
+- "/" - divides a numerator by a denomenator
+- "%" - returns the remainder of a division
+- "*"
+- abs() - changes negatives values into positive 
+
+Lists
+Lists are data types that stores values in an array, enclosed by a square bracket.
+eg: Names = ["Nana", "Afua", "Antwiwaa", "Conduah"]
+List Methods
+    .append() - used to add something at the end of the list
+    .insert() - adds an item to a list in a specific location. 
+    It takes two arguments, the index and the new item.
+    .remove() - it removes an item from the list
+    .pop() - removes very last item from a list but can also remove an item whose index is specified
+    .reverse() - reverse a list and sets its first index from the last to the first
+    .sorted() - used to arrange or sort a list of numbersor ascending and descending order takes arg "reverse=True/false"
+    .sort() - used to arrange a list in alphabetical values or strings, takes arg "reverse=True/false"
+    Note there is .sort() and sorted()
+    .extend() - adds a list to another list
+List Functions
+    min() - returns the minimum number in a list
+    max() - return the maximum number in a list
+    sum() - returns the sum of all the numbers in a list
