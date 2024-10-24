@@ -36,3 +36,7 @@ program = "thanks to the HACSA foundation"
 
 entire_greeting = f"{name} {motive} {program}"
 print(entire_greeting)
+
+greeting = ["Hello", "Afua", "You are welcome", "to Canada"]
+print(" ".join(greeting))
+
