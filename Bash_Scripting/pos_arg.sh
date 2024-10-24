@@ -51,12 +51,15 @@
 
 
 
-if [ "$1" -gt 10 ] && [ "$2" -gt 10 ]
-then
-     echo "Both numbers are greater than 10"
-else 
-     echo "Both numbers are not greater than 10"
-fi
+# if [ "$1" -gt 10 ] && [ "$2" -gt 10 ]
+# then
+#      echo "Both numbers are greater than 10"
+# else 
+#      echo "Both numbers are not greater than 10"
+# fi
+
+my_fortune=$(fortune)
+cowsay "$my_fortune"
 
 
 
