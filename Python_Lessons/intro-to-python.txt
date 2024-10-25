@@ -41,17 +41,36 @@ Adding an integer and a floating point number is possible because of implicit ty
     float() - for explicit conversion of a value to a float data type
 
 
-Methods
+String Methods
 .lower() - changes all letters to lower case
 .upper() - changes all letters to upper case
 .count() - count the number of occurences of the argument passed
 .find() - used to find the starting index of the argument passed
 .join() - used to join strings by a delimeter from a list into one string
+.strip() - gets rid of surrounding spaces of a string to both sides
+.lstrip() - gets rid of surrounding spaces of a string to the left
+.rstrip() - gets rid of surrounding spaces of a string to the right
+.endswith() - used to check if a substring or a string ends with the argument that is passed
+.isnumeric() - used to check if a string is a numeric value or not. 
+ Method can check if a string is composed of only numbers. 
+ If the string contains only numbers, this method will return True
+.split() - This is used to split a string into a list of strings or substrings. Can take an argument, a delimeter to split strings by.
+.isalpha() - Returns True if there are only letters in the string. If not, returns False.
+
 
 Indexing
 - Counting by positional index
 
 String Concatenation
+name = "Manny"
+number = len(name) * 3
+print("Hello {}, your lucky number is {}".format(name, number))
+
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+
 
 
 Numerical Data
@@ -83,3 +102,50 @@ List Functions
     min() - returns the minimum number in a list
     max() - return the maximum number in a list
     sum() - returns the sum of all the numbers in a list
+
+
+Tuples
+A python datatype that are similar to lists but are enclosed with the curved brackets '()'
+They are immutable and hence its content cannot be mmodified, unlike lists which are mutable.
+So if you want to change the contents use a list instead.
+They don't have as many methods a lists do.
+
+Tuple Methods and functions
+
+number_tuple = (1, 5, 3, 8, 5)
+
+len()  eg: len(number_tuple)
+.index()  eg: number_tuple.index(5)
+count()  eg: number_tuple.count(5)
+
+
+Sets 
+Sets are values that are unordered and they have no duplicates. They are notified or enclosed in curly braces.
+eg: my_set = {'Grace, 'Naomi', 'Emefa', 'Priscilla', 'Jennifer'}
+Sets don't care about the order of things amd are mostly used to remove duplicates
+They are used to check the membership of values eg: print('Grace' in my_set) // Should return True
+
+
+Methods
+.intersection() - Intersection bring common values in two sets
+.union() - used to combine two sets but does not duplicate any value
+.difference() - prints out the values in one set that are not in the other set
+.add() - adds a new value to a set
+
+Creating an empty list, tuple and set
+initialize the variable containing the list, tuple or set as an empty 
+square bracket, curved bracket and curly bracket respectively.
+Example:
+my_list = []
+my_tuple = ()
+my_set = set{} // if you don't include the set keyword you will be creating a dictionary which
+is another datatype
+
+Convert a list to a set
+numbers = [1, 5, 3, 8, 8, 5]
+
+unique_numbers = set(numbers)
+new_list = list(unique_numbers)
+print(new_list)
+
+Python has a help function 'help()', that helps us to remember or check the definition of some methods
