@@ -1,0 +1,7 @@
+Control Flow
+This involves conditional statements like the if, if else and loops
+
+If statements
+Syntax:
+if condition:
+    statement
