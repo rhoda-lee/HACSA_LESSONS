@@ -2,7 +2,8 @@ Understanding Package Managers in Linux
 What is a Package Manager?
 A package manager is a tool that helps you manage software on your operating system. It allows you to install, update, upgrade, and uninstall software applications in an organized and efficient way.
 
-Package managers do more than just install software—they also handle dependencies, which are other pieces of software that the program you're installing may need to function correctly. By using a package manager, you ensure that the software is correctly set up and updated when needed.
+Package managers do more than just install software—they also handle dependencies, which are other pieces of software that the program you're installing may need to function correctly. 
+By using a package manager, you ensure that the software is correctly set up and updated when needed.
 
 Different Package Managers for Different Systems
 Linux: On most Linux distributions (like Ubuntu or Debian), the package manager is called APT (Advanced Package Tool). It simplifies installing, managing, and removing software from a central repository.
