@@ -83,3 +83,14 @@ print(list1)
 # Question 7
 names = ['Alice', 'Bob', 'Charlie', 'David']
 print(names.index('Bob'))
+
+my_string = 'This is a random string'
+print(my_string.split())
+
+my_list = ['This', 'is', 'a', 'random', 'string']
+print(' '.join(my_list))
+# Output: 'This is a random string'
+
+my_string = 'This is a random string'
+print(my_string.find('random'))
+# Output: 10
