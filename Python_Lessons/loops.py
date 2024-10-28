@@ -79,3 +79,32 @@ student = {
 
 for key, value in student.items():
     print(f'{key}: {value}')
+
+
+
+'''
+Create a list called grades containing 85 72 90 68 80
+Use a for loop to print only grades that are above 80
+Calculate and print the average of all grades
+'''
+
+grades = [85, 72, 90, 68, 80]
+
+for grade in grades:
+    if grade > 80:
+        print(grade)
+
+total = sum(grades)
+length = len(grades)
+print(total / length)
+
+
+'''
+Create a list of tuples called products containing product names and prices:
+products =[('Apple', 1.29),('bannana', 0.59), ('Orange', 0.79)]
+Use a for loop to unpack each tupple and print 'Product: [name] - Price: [price]'
+'''
+products = [('Apple', 1.29),('Bannana', 0.59), ('Orange', 0.79)]
+
+for name, price in products:
+    print(f'Product: {name} - Price: {price}')
