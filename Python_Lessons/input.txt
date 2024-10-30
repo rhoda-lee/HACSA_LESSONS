@@ -1,0 +1,4 @@
+input() - This takes input from the user in the terminal when the script is run
+eg: input('What is your name?: ')
+We can asin the input method to a variable so it stores the user input
+eg name = input('What is your name? :')
