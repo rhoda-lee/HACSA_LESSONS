@@ -1,1 +1,12 @@
 Python Functions
+
+
+
+
+
+Modules
+Another advantage of using functions in python is the ability to keep 
+functions in files which are known as modules
+Keeping functions in separate files help you to keep the code and focus 
+on its hig level logics
+You can share modules with otherss and they can call your functions
