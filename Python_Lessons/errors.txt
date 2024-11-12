@@ -1,0 +1,39 @@
+Errors and Exceptions in Python
+Types of errors and how to handle them.
+
+Syntax Error:
+This error happens due to incorrect code Syntax
+Eg; incorrect spelling, unterminated string literal
+
+Runtime Error:
+Runtime errors are errors that occur during the execution of your program when something unexpected happens
+When an error occurs which makes python unsure of what to do, this creates an exception object
+We have to find a way of handling these errors and exceptions
+
+Traceback:
+The traceback is a report of the kind of error that happened
+
+Error Handling
+Try Except Error Handler:
+Even if an exception happens the program keeps running.
+Without this it will break the program
+    Syntax
+        try:
+            what to run(contains code that may have an exception)
+        except:
+            code to catch the exception
+
+Types of Exceptions
+1. ZeroDivision Exception
+This occurs when you try to divide a number by zero(0)
+
+2. TypeError
+It occurs when you attempt to perform an action of an incorrect data type
+Eg: 1 + '1' # concatenating a string and an integer
+
+3. ValueError
+Argument that has a specific type but it receives an inappropriate value
+
+4. IndexError
+5. KeyError
+6. FileNotFoundError
