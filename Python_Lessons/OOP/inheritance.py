@@ -49,36 +49,21 @@ class Employee:
 
 
 
-# This class inherits fro the employee class
+# This class inherits from the employee class
 
 class Software_Engineer(Employee):
     def __init__(self, firstname, lastname, pay, prog_lang):
         super().__init__(firstname, lastname, pay)
         self.prog_lang = prog_lang
 
-
-
-
-
-
-swe1 = Software_Engineer('Rhoda', 'Lee', 92000, 'Python')
-print(swe1.show_fullname())
-print(swe1.prog_lang)
-
-
-swe2 = Software_Engineer('Rhoda', 'Oduro-Nyarko', 87000, 'JavaScript')
-print(swe2.show_fullname())
-print(swe2.prog_lang)
-
-
-
-
 class Project_Manager(Employee):
-    def __init__(self, firstname, lastname, pay, department):
+    def __init__(self, firstname, lastname, pay, department, employees = None):
         super().__init__(firstname, lastname, pay)
         self.department = department
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
 
-pm1 = Project_Manager('Habiba', 'Adam Salisu', 92000, 'IT Department')
-print(pm1.show_fullname())
-print(pm1.department)
+
 
