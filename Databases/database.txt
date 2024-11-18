@@ -1,0 +1,147 @@
+DATABASES
+
+A Database is a structured or unstructured collection of data that the backend server uses to store and manage informatio efficiently
+A  database can be accessed by the backend code to retrieve, update, delete data
+
+Importance of Databases in backend development
+1. To store data persistently even after the application closes or the server restarts
+2. To organize and manage data for easy accessed
+3. To handle large amount of data that cannot fit in memory
+4. To allow multiple users to access the same data simultaneously
+
+Databases are very important for frontend and backend development in web architecture
+There are 2 types of DBMS
+1. Relational
+They handle databases by storing them in tables
+The columns in the table has fields
+They are relatively harder to learn as compared to non-relational databases
+    i. MySQL
+    ii. PostgreSqL
+    iii. SQLite
+
+2. Non-Relational DBMS
+Data is stored as documents, key-value pairs or graphs
+They are recommended or used for large unstructured data that cannot fit in tables
+    i. MongoDB
+    ii. CassandraDB
+    iii. Redis
+
+
+MySQL
+It is a query language
+We are using local SQL
+Syntax
+
+    Creating a database
+    ```bash
+    CREATE DATABASE database_name;
+    eg:
+    CREATE DATABASE tech4girls;
+
+    Output:
+    Query OK, 1 row affected (0.03 sec)
+    ```
+
+    Showing a database
+    ```bash
+    SHOW DATABASES;
+
+    Output:
+    mysql> SHOW DATABASES;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    | tech4girls         |
+    +--------------------+
+    5 rows in set (0.04 sec)
+
+    ```
+
+    Using a Database
+    ```bash
+    USE tech4girls;
+
+    Output:
+    Database changed
+    ```
+
+    Interracting with SQL server using Scripts
+    SQL Scripting
+
+    Deleting a database
+    ```bash
+    DROP DATABASE tech4girls;
+    ```
+
+
+    Making sql script executable
+    run this after chmod +x test.sql
+    ```bash
+    mysql -u root -p < test.sql
+    ```
+
+-- Creatig a Database
+CREATE DATABASE IF NOT EXISTS tech4girls;   -- Use this instead when creating a Database
+Using IF in SQL
+
+SQL executes from the top
+A database of everyone in class
+
+
+DATA TYPES IN SQL
+1. VARCHAR(256) -- takes in an argument of a specific number which is how long it can be
+
+2. INT -- Used to store positive and negative whole numbers
+
+3. FLOAT -- Used for numbers with fractional part
+
+4. DATE 
+
+5. BOOLEAN -- For True or False Values
+
+CONSTRAINTS
+Used to set limitations and restictions applied to a specific column 
+to make sure wrong data is not inserted in the table
+
+1. NOT NULL
+This makes sure column value in every row is not empty or blank
+
+2. UNIQUE
+Column values in every row is unique
+
+3. PRIMARY KEY
+A combination of the UNIQUE and NOT NULL constraints 
+They are usually set to be IDs since they are mostly unique 
+For every table there must be only one property set as PRIMARY key
+
+4. FOREIGN KEY
+Used to form relationships between tables
+It helps to create parent child relationships between tables
+
+5. AUTO_INCREMENT
+This increments any column value automatically
+
+
+
+
+Creating tables
+``bash
+CREATE TABLE IF NOT EXISTS backend_class(
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(256) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(256) UNIQUE NOT NULL,
+);
+
+```
+
+Showing a table
+```bash
+SHOW TABLES;
+```
+
