@@ -25,6 +25,9 @@ CREATE TABLE IF NOT EXISTS backend_class (
 SHOW TABLES;
 
 INSERT INTO backend_class (first_name, last_name, age, email)
-VALUES ('Rhoda', 'Oduro-Nyarko', 22, 'rhodalee.dev@gmail.com');
+VALUES ('Rhoda', 'Oduro-Nyarko', 22, 'rhodalee.dev@gmail.com'),
+('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@st.ug.edu.gh'),
+('Talatu', 'Nyande', 22, 'tnyande@gmail.com');
 
 SELECT * FROM backend_class;
+
