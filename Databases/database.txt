@@ -145,3 +145,113 @@ Showing a table
 SHOW TABLES;
 ```
 
+PREVILEGES
+They are permissions granted to users or roles that define what actions they can perform 
+on databases, tables or other objects in a Database Management System.
+
+TYPES OF PREVILEGES
+- Object Level Priviledge
+    SELECT
+    INSERT 
+    UPDATE
+    
+- Database Level Priviledge
+    CREATE
+    DROP
+    ALL - For granting all priviledges 
+
+- Administrative Level Priviledge
+    GRANT   ------------- SHOW GRANTS FOR 'root'@'localhost'; ---------
+    RELOAD
+    SUPER
+
+ROOT USER (DEFAULT USER)
+Has all priviledges. Meaning they have the power to control all SQL.
+- Reading, writing, modifying or managing the database itself
+
+-- CREATING A USER IN SQL --
+```bash
+CREATE USER IF NOT EXISTS 'username'@'localhost' IDENTIFIED BY 'password'
+```
+
+-- ENTERING MYSQL INTERPRETER AS A NEW USER, NOT ROOT --
+```bash
+rhodalee@Rhoda-Lee:~/HACSA_LESSONS$ mysql -u rhodalee -p
+```
+
+-- GRANTING PRIVILEDGES --
+SYNTAX:
+```bash
+GRANT privilege_type ON database.table_name TO 'username'@'localhost';
+```
+This is done or granted by the root user.
+
+-- GRANTING PRIVILEDGES --
+```bash
+GRANT privilege_type ON database.table_name TO 'username'@'localhost';
+```
+-- USAGE
+```bash
+GRANT SELECT ON tech4girl.backend_class TO 'rhodalee'@'localhost';
+```
+
+-- GRANTING A PRIVILEGE ON ALL DATABASES THE ROOT USER OWNS TO ANOTHER USER
+```bash
+GRANT privilege_type ON *.* TO 'username'@'localhost';
+```
+-- USAGE
+```bash
+GRANT INSERT, UPDATE, SELECT ON *.* TO 'rhodalee'@'localhost';
+```
+
+-- REMOVING PRIVELEGES FROM USERS
+```bash
+REVOKE privilege_type ON database.table_name FROM 'username'@'localhost';
+```
+-- USAGE
+```bash
+REVOKE INSERT ON tech4girls.backend_class FROM 'rhodalee'@'localhost';
+```
+
+-- REMOVING A PRIVILEGE ON ALL DATABASES THE ROOT USER GAVE TO ANOTHER USER
+```bash
+REVOKE privilege_type ON *.* FROM 'username'@'localhost';
+```
+-- USAGE
+```bash
+REVOKE INSERT, UPDATE, SELECT ON *.* FROM 'rhodalee'@'localhost';
+```
+
+-- MAKING ONE A ROOT USER, GIVE ALL PRIVILEGES
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'rhodalee'@'localhost';
+```
+
+-- REVOKING ALL PRIVILEGES FROM A USER
+```bash
+REVOKE ALL PRIVILEGES ON *.* FROM 'rhodalee'@'localhost';
+```
+
+                     --------- RELATIONSHIPS IN SQL -------------
+All types of datbases have relationships.
+Relationships define how tables are connected.
+They ensure proper structuring or Relational Databases and data consistency.
+There are 3 types of relationships:
+
+ONE-TO-ONE RELATIONSHIP (1 ---> 1 )
+Each row in Table A is linked exactly to one(1) row in Table B
+    Eg: Users having one profile and each profile belonging to one user
+    They are linked together by a user ID
+
+    Eg: Each student uses one laptop and each laptop is used by one user
+
+
+ONE-TO-MANY RELATIONSHIP (1 ---> *(Many))
+A row in table A can be related to many rows in Table B but 
+one row in Table B can only relate to one row intable A.
+    Eg: Customers can place many orders but one order is linked to one customer.
+
+
+
+MANY-MANY RELATIONSHIP (*(Many) ---> *(Many))
+
