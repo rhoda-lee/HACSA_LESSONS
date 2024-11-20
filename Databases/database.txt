@@ -251,7 +251,5 @@ A row in table A can be related to many rows in Table B but
 one row in Table B can only relate to one row intable A.
     Eg: Customers can place many orders but one order is linked to one customer.
 
-
-
 MANY-MANY RELATIONSHIP (*(Many) ---> *(Many))
-
+----- Research on Many-To-Many Relationships
