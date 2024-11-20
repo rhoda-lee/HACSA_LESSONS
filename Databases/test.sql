@@ -22,12 +22,31 @@ CREATE TABLE IF NOT EXISTS backend_class (
     email VARCHAR(256) UNIQUE NOT NULL
 );
 
-SHOW TABLES;
-
-INSERT INTO backend_class (first_name, last_name, age, email)
+/* INSERT INTO backend_class (first_name, last_name, age, email)
 VALUES ('Rhoda', 'Oduro-Nyarko', 22, 'rhodalee.dev@gmail.com'),
 ('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@st.ug.edu.gh'),
-('Talatu', 'Nyande', 22, 'tnyande@gmail.com');
+('Talatu', 'Nyande', 22, 'tnyande@gmail.com'); */
+
+
+CREATE TABLE IF NOT EXISTS laptops (
+    laptop_name VARCHAR(100) NOT NULL,
+    laptop_number INT PRIMARY KEY,
+    student_id INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES backend_class(student_id)
+);
+
+SHOW TABLES;
+
+-- INSERT INTO laptops (laptop_name, laptop_number, student_id)
+-- VALUES ('HP 14', 2020, 1);
+
+
+UPDATE backend_class
+SET age = 21, email = 'talatunyande@gmail.com'
+WHERE first_name = 'Talatu';
+
+DELETE FROM backend_class
+WHERE first_name = 'Talatu';
 
 SELECT * FROM backend_class;
-
+SELECT * FROM laptops;
