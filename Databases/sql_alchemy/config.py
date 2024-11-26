@@ -1,0 +1,32 @@
+from sqlalchemy import create_engine #to connect our database to sqlalchemy
+# it acts as a bridge between our pyhton appp and database informs sqlalchemy how to connect to our database including, location of database, credentials needed to access the database
+# High level library
+from sqlalchemy.orm import sessionmaker
+# Session is a workspace where we can do operations like add, update, delete
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Access the environment variables
+database_username = os.getenv("DB_USERNAME")
+database_password = os.getenv("DB_PASSWORD")
+database_name = os.getenv('DB_NAME')
+
+#print(database_username, database_password, database_name)
+
+connection_str = f'mysql+mysqlconnector://{database_username}:{database_password}@localhost/{database_name}'
+
+engine = create_engine(connection_str)
+
+try:
+    connection = engine.connect() # .connect()establishes an active connection to our dtabase
+    print('Located and connected to database')
+    # After opening it is best to close it
+    connection.close()
+except Exception as e:
+    print(f'An error occured: {e}')
+
+DBSession = sessionmaker(bind = engine)
+session = DBSession()

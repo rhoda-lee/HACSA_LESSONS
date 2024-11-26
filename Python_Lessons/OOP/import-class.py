@@ -66,7 +66,7 @@ manager1.show_all_employees()
 They describe how particular methods should behave
 Used to change or define how a method should behave inside a class'''
 
-'''The __repr__ representation is the official representation of an object.
+'''The __repr__ is the official representation of an object.
 It is best to create in such a way that it tells a developer how to create a specific method
 It is advicable to use f-strings
 refer to Manager class

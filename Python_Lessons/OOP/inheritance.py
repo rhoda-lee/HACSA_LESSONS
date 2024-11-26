@@ -19,7 +19,7 @@ class Employee:
         self.pay = pay
         self.email = f'{firstname}.{lastname}@gmail.com'.lower()
 
-        # In this main method we can ince=rease the number of employees after every instance of the class
+        # In this main method we can increase the number of employees after every instance of the class
         Employee.num_of_employees += 1
 
     def show_fullname(self):
@@ -38,7 +38,8 @@ class Employee:
     to create a class method we make use of decorators
     They are like functions that take another function as an argument and returns a modified version of that function
     Decorators look like this: @classmethod
-    They take "cls" as their first argument instead of self'''
+    They take "cls" as their first argument instead of self
+    @classmethod'''
 
     @classmethod
     def set_pay_percent(cls, amount):
