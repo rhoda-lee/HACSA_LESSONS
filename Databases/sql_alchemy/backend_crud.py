@@ -44,8 +44,15 @@ class BackendCrud:
     
 # Creating an instance of the BackendCrud class
 backend_crud = BackendCrud(session)
-#new_student = backend_crud.insert_student('Rhoda', 'Lee', 22, 'rhodalee.dev@gmail.com')
-#new_student = backend_crud.insert_student('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@gmail.com')
+
+# Inserting new Students into the backend_class Table
+new_student = backend_crud.insert_student('Rhoda', 'Lee', 22, 'rhodalee.dev@gmail.com')
+new_student = backend_crud.insert_student('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@gmail.com')
+new_student = backend_crud.insert_student('Augustine', 'Ninyung', 22, 'aninyung@gmail.com')
+new_student = backend_crud.insert_student('Samuel', 'Gyasi', 23, 'sgyasi@gmail.com')
+new_student = backend_crud.insert_student('Matilda', 'Baffah', 21, 'mbaffah@gmail.com')
+new_student = backend_crud.insert_student('Mandy', 'Serwaa', 19, 'mserwaa@gmail.com')
+
 
 #print(new_students)
 
@@ -61,6 +68,6 @@ backend_crud = BackendCrud(session)
 # updated_student = backend_crud.update_student(1, last_name = 'Oduro-Nyarko')
 # print(updated_student)
 
-deleted_student = backend_crud.delete_student(5)
-print(deleted_student)
+# deleted_student = backend_crud.delete_student(5)
+# print(deleted_student)
 
