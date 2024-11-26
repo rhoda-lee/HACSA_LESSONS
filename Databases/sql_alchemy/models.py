@@ -26,6 +26,11 @@ class Laptops(Base):
     student_id = Column(Integer, ForeignKey('backend_class'))
 
     student = relationship('Backend', back_populates = 'laptops')
+
+    def __str__(self):
+        return f'Laptop name: {self.laptop_name}, Laptop number: {self.laptop_number} Student id: {self.student_id}'
+
+
 # Create laptops_crud.py to apply crud operations
 
 # session.bind ensures the table is created in the same database we are connected to
