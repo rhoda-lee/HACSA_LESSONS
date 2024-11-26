@@ -1,11 +1,12 @@
 DATABASES
 
-A Database is a structured or unstructured collection of data that the backend server uses to store and manage informatio efficiently
+A Database is a structured or unstructured collection of data that the backend 
+server uses to store and manage informatio efficiently
 A  database can be accessed by the backend code to retrieve, update, delete data
 
 Importance of Databases in backend development
 1. To store data persistently even after the application closes or the server restarts
-2. To organize and manage data for easy accessed
+2. To organize and manage data for easy access  
 3. To handle large amount of data that cannot fit in memory
 4. To allow multiple users to access the same data simultaneously
 
@@ -253,3 +254,150 @@ one row in Table B can only relate to one row intable A.
 
 MANY-MANY RELATIONSHIP (*(Many) ---> *(Many))
 ----- Research on Many-To-Many Relationships
+
+
+SQLAlchemy is a python library used to interact with relational databases
+It provides a low level library for executing raw SQL
+It also provides an object relational mapper (ORM):
+    This is a high level abstraction that allows you to interact with 
+    databases using python classes and objects
+    It allows you to interact with sql using python code, so you don't need to write queries
+    In ORM, class maps to a table in sql
+
+In SQLAlchemy, tables are models
+Benefits of SQLAlchemy:
+    1. Avoid writing raw sql queries repeatedly
+    2. It improves maintanance and readability of code
+    3. Switching between databases like SQLite and PostgreSQL is easier
+
+    INSTALLATION
+    sudo apt install python3-venv
+
+    python3 -m venv ~/myenv
+
+    source ~/myenv/bin/activate
+
+    pip install mysql-connector-python
+
+    pip install sqlalchemy
+
+# Low level libraries in SQLAlchemy
+```bash
+    from sqlalchemy import create_engine #to connect our database to sqlalchemy
+```
+# It acts as a bridge between our pyhton app and database 
+It informs sqlalchemy how to connect to our database, the type of database including, 
+location of database, credentials needed to access the database
+
+mysqlconnector is the help sqlalchemy needs to establish a connection
+```bash 
+    connection_str = 'mysql+mysqlconnector://username:password@localhost/database_name'
+```
+
+CRUD
+C - CREATE can mean INSERT in sql
+R - READ can mean SELECT
+U - UPDATE can mean UPDATE in sql
+D - DELETE can mean DELETE in sql
+
+Sessionmaker helps us to perform CRUD operations
+It helps us to create a configured session class
+
+
+
+
+from sqlalchemy import create_engine #to connect our database to sqlalchemy
+# it acts as a bridge between our pyhton appp and database informs sqlalchemy how to connect to our database including, location of database, credentials needed to access the database
+# High level library
+from sqlalchemy.orm import sessionmaker
+# Session is a workspace where we can do operations like add, update, delete
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Access the environment variables
+database_username = os.getenv("DB_USERNAME")
+database_password = os.getenv("DB_PASSWORD")
+database_name = os.getenv('DB_NAME')
+
+#print(database_username, database_password, database_name)
+
+connection_str = f'mysql+mysqlconnector://{database_username}:{database_password}@localhost/{database_name}'
+
+-- Creating models in sqlalchemy
+
+Relationships in SQLAlchemy
+Specifies the attributes on the related class that handles the reverse side of the relationship
+
+
+
+API (Application Programming Interface)
+A way for two softwares or systems to communicate
+If you build an API you just built a backend server
+It helps to build functionalities within the programming language to send request
+
+You send a requestto a backend and get a response back 
+It is the intermediary between the database and the backend
+
+Taping an API send a request
+The python or js application serves as a client
+The response comes in a JSON format
+JSON - JavaScript Object Notation
+
+Benefits:
+Use predefined function instead of building from scrath
+
+
+APIs are important because:
+They expose particular resources not all resources
+They help different systems work together
+
+
+An endpoint is a single entry pont in an api that perforns a particular action or provides a particular resource
+It is where the client sends its request in order to interact with the server
+It is done by the backend developers
+
+The frontend would have to specify the endpoint in order to access the backend
+/backend_class/students
+/backend_class/students/1
+
+URI
+First thing we have is https://domain(localhost):port/file_path
+This is how an endpoin looks like: https://127.0.0.1:3000//backend_class/students
+domain name is where the server is located, the address
+
+
+Rules to building a RESTful API:
+REST: Representational State Transfer
+It is a set of guidlines for building APIs
+Common guidlines:
+
+1. Client server separation
+The server will handle data storage and business logic
+The client handles the user Interface
+The server can work independently
+What is done in the backend should not change or affct the frontend 
+so long as the client is not consuming from the server
+
+2. Stateless communication:
+Every API request from the client must contain all needed informationn the server needs to process it 
+The server does not store client specific data between requests.
+After responding to every request, the server must forget the data of the past client request.
+
+3. Uniform Interface:
+The API should follow a consistent and predictable design making it easier for clients to use and understand.
+Naming API Endpoints should be as consistent as posible
+Example:
+/backend_class/all_students -- for all students
+/backend_class/all_students/1 -- specific student by their ID
+
+4. Layers System
+API architecture should allow intermediate layers example load balancers 
+between the client and server without affectiong communication
+API should not be affected if there is a load balancer in the architecture
+
+
+
+
