@@ -1,0 +1,128 @@
+HTTP Methods
+The different ways to request and access data from the server
+HTTP Methods maps to a crud operation
+
+GET requests
+Used to retrieve data from the server
+It maps to READ in the CRUD operation
+
+POST request
+Used to insert data into the server
+Relates to CREATE in CRUD operations
+
+DELETE request
+Used to delete data from the server
+It maps to DELETE in CRUD operations
+
+PUT request
+Used to uodate data that already exists
+It maps with UPDATE in CRUD operations
+
+PATCH request
+Used to update dataUsed tp update just a piece of data, the exact piece of data we select to update
+Unlike the PUT request which updates the entire data we select to update
+
+GET - READ
+POST - CREATE
+DELETE - DELETE
+PUT - UPDATE
+PATCH - UPDATE(Specific item)
+
+STATUS CODES
+It does not only send a response it also sends a status code to inform yyou if your request was successful or not
+
+200
+Successful request or Okay
+
+201
+A resourse has been created. This shows when you do a PUT request
+
+400
+Bad request
+
+401
+Unauthorized/ Happens when someone who is not logged in or authorized to access something tries
+
+404
+Resource not found.
+
+403
+Forbidden. 
+Trying to access a restricted file. You may be logged in but may not have access to some sections of an application.
+
+409
+Conflict.
+When you insert data of a cetain type and try to insert data of that type it raises a conflict.
+
+500
+Internal server error. Has nothing to do with the client and has everything to do with the server
+Something is wrong with the server or the api.
+
+
+
+CREATING AN API 
+API Endpoints
+
+Frameworks
+A framework is a Prewritten code that provides a structure and common functionalities for building applications
+They provide reusable components, tools and libraries whixh can speed up development 
+and ensure consistency accross projects
+
+Flask is a ligtweight and flexible web Frameworks for python 
+It is designed to be simple and easy to use making it a popular choice 
+for small to medium size applications or apis
+
+It is often refered to as a micro framework because it provides the 
+essential tools to get a web appliication running
+
+
+Benefits of Flask
+1. Flask provides the core features needed for web dev without imposing a specific projct structure
+
+2. It is extensible:
+    Dev can add extensions to handle tasks such as database integration and authentication
+
+3. It can be used to render HTML templates: Can be used for both frontend and backend development
+
+4. Provides a simple way to map URLs to python functionalities
+
+5. Provides a built-in server for development and debugging
+
+
+In Flask a route in an endpoint
+
+
+(myenv) rhodalee@Rhoda-Lee:~/HACSA_LESSONS/Databases/sql_alchemy$ python3 app.py
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [27/Nov/2024 16:12:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2024 16:12:06] "GET /favicon.ico HTTP/1.1" 404 -
+
+FLASK_APP (Flask Environmental variable)
+Tells flask the file my lask app is in
+The environmental variable are only bound to the terminal session that is active or you are in
+
+export FLASK_APP=app.py
+flask run
+
+(myenv) rhodalee@Rhoda-Lee:~/HACSA_LESSONS/Databases/sql_alchemy$ export FLASK_APP=app.py
+(myenv) rhodalee@Rhoda-Lee:~/HACSA_LESSONS/Databases/sql_alchemy$ flask run
+ * Serving Flask app 'app.py'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+
+
+Debug Mode:
+It automatically saves what we are doing
+This reflects changes we make in our app on the server
+Run with python3 app.py
+
+If you want to use FLASK_APP, then use an environmental variable
+export FLASK_BUG=1, WHERE 1 is True and 0 functionalities
+flask run
+
