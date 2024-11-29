@@ -10,7 +10,9 @@ class BackendCrud:
         new_student = Backend(first_name = first_name, last_name = last_name, age = age, email = email)
         self.session.add(new_student)
         self.session.commit()
-        return f'New student with these details {new_student} was added!'
+        return new_student
+    
+
     
     def get_all_students(self):
         return self.session.query(Backend).all()
@@ -43,15 +45,15 @@ class BackendCrud:
         return f'Student with student id {student_id} has been deleted!'
     
 # Creating an instance of the BackendCrud class
-backend_crud = BackendCrud(session)
+#backend_crud = BackendCrud(session)
 
-# Inserting new Students into the backend_class Table
-new_student = backend_crud.insert_student('Rhoda', 'Lee', 22, 'rhodalee.dev@gmail.com')
-new_student = backend_crud.insert_student('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@gmail.com')
-new_student = backend_crud.insert_student('Augustine', 'Ninyung', 22, 'aninyung@gmail.com')
-new_student = backend_crud.insert_student('Samuel', 'Gyasi', 23, 'sgyasi@gmail.com')
-new_student = backend_crud.insert_student('Matilda', 'Baffah', 21, 'mbaffah@gmail.com')
-new_student = backend_crud.insert_student('Mandy', 'Serwaa', 19, 'mserwaa@gmail.com')
+# # Inserting new Students into the backend_class Table
+# new_student = backend_crud.insert_student('Rhoda', 'Lee', 22, 'rhodalee.dev@gmail.com')
+# new_student = backend_crud.insert_student('Nana Afua Antwiwaa', 'Conduah', 19, 'anaconduah@gmail.com')
+# new_student = backend_crud.insert_student('Augustine', 'Ninyung', 22, 'aninyung@gmail.com')
+# new_student = backend_crud.insert_student('Samuel', 'Gyasi', 23, 'sgyasi@gmail.com')
+# new_student = backend_crud.insert_student('Matilda', 'Baffah', 21, 'mbaffah@gmail.com')
+# new_student = backend_crud.insert_student('Mandy', 'Serwaa', 19, 'mserwaa@gmail.com')
 
 
 #print(new_students)
