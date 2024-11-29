@@ -126,3 +126,8 @@ If you want to use FLASK_APP, then use an environmental variable
 export FLASK_BUG=1, WHERE 1 is True and 0 functionalities
 flask run
 
+
+
+Blueprints in flask are ways to organize your apps into smaller reusable components.
+They allow you to split your app into modules
+Each Blueprint can have its own routes, templates, static file and other resources
