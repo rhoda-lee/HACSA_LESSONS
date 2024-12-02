@@ -14,7 +14,7 @@ database_username = os.getenv("DB_USERNAME")
 database_password = os.getenv("DB_PASSWORD")
 database_name = os.getenv('DB_NAME')
 
-#print(database_username, database_password, database_name)
+print(database_username, database_password, database_name)
 
 connection_str = f'mysql+mysqlconnector://{database_username}:{database_password}@localhost/{database_name}'
 
