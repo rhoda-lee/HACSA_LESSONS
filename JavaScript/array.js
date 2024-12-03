@@ -58,7 +58,7 @@ console.log(series)
 // .flat() flatening an array means to reduce the dimentionality of an array
 const myArray = [[1, 2], [3, 4], [5, 6]]
 const flattendArr = myArray.flat()
-console.log(flattendArr)
+// console.log(flattendArr)
 
 // push(): adds element to end of an array
 movies.push('Squid Games')
