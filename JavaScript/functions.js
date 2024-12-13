@@ -119,3 +119,95 @@ const divByTwo = numArray.map(
     (num) => num / 2
 )
 console.log(divByTwo)
+
+/* forEach() function
+This is an array function that executes a callback function onn each of its array elements
+Unlike the map function, the forEach function does not return a new array and 
+does not modify the original array either
+Instead it iterates through the elements of an array and performs an operation on each of them
+*/
+
+// forEach()
+// const namesOfPeople = ['prissy', 'rhoda', 'jedidah', 'saida', 'delicious']
+// const names = namesOfPeople.forEach(
+//     (name) => console.log(name)
+// )
+// console.log(names)
+
+// Modifying Array with forEach()
+const names = ['prissy', 'rhoda', 'jedidah', 'saida', 'delicious']
+let upperNames = []
+
+names.forEach(
+    (name) => {
+        const upper = name.toUpperCase()
+        upperNames.push(upper)
+    }
+)
+console.log(upperNames)
+
+// filter() Function
+// It is an arry method used to filter off methods that meet a condition
+
+const countries = ['Ghana', 'Nigeria', 'UK', 'Netherlands', 'USA', 'Norway', 'Uruguay', 'Uganda']
+const countWithNorU = countries.filter(
+    (country) => {
+        return country.startsWith('N') || country.startsWith('U')
+    }
+)
+console.log(countWithNorU)
+
+// Countries that start with 'U'
+const countries2 = ['Ghana', 'Nigeria', 'UK', 'Netherlands', 'USA', 'Norway', 'Uruguay', 'Uganda']
+const countWithU = countries2.filter(
+    (country) => country.startsWith('U')
+
+)
+console.log(countWithU)
+
+// Reduce()
+/* This reduces an array to a single value/ 
+It iterates through an array, performs a function on each element and returns a single value. 
+The method takes a callback function with two parameters representing 2 elements in the array.
+The callback function then performs an action starting from the first element in the array.
+Say you have an array of points for variouss participants:
+*/
+
+const participantPoints = [10, 20, 30, 40, 50]
+
+const sumOfPoints = participantPoints.reduce(
+    (a, b) => a + b
+)
+
+console.log(sumOfPoints)
+
+const sentence = ['this', 'is', 'the', 'backend', 'class']
+
+const fullSentence = sentence.reduce(
+    (a, b) => a + ' ' + b
+)
+console.log(fullSentence)
+
+const sentence2 = ['this', 'is', 'the', 'backend', 'class']
+
+const fullSentence2 = sentence2.reduce(
+    (a, b) => {
+        return sentence2.join(' ')
+    }
+)
+console.log(fullSentence2)
+
+// find()
+// It returns the first element in an array that meets a condition
+
+const findPrissy = names.find(
+    (name) => name === 'prissy'
+)
+
+console.log(findPrissy)
+
+/* research on:
+some()
+includes()
+findIndex()
+every() */
