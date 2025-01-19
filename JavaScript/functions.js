@@ -67,6 +67,17 @@ const randomArrow = (num) => num * num
 const res = randomArrow(10)
 console.log(res)
 
+// Nested Functions
+/* Functions within a function */
+function outer() {
+    console.log("Outer");
+    function inner() {
+        console.log("Inner");
+    }
+    inner();
+}
+outer();
+
 
 // Anonymous funtions: They are funtions without names. To call them, store them in a variable
 // This is a function expression: storing the nameless function in a variable
