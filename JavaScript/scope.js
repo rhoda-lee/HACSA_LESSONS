@@ -13,6 +13,8 @@ const
 This is used to create variables whose values can not be changed again
 */
 
+// refer to functions :- nested functionsand closure
+
 
 
 //DATA TYPES
