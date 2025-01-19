@@ -27,6 +27,47 @@ function multiplyByTwo(num) {
     return result
 }
 
+// Rest Parameters
+/* Rest Parameters allow us to pass an infinite amount arguments during function calls
+They bundle the arguments into an array, hence returning an array
+*/
+
+function doSomething(num1, ...otherNums) {
+    console.log(num1);
+    console.log(otherNums);
+}
+
+doSomething(3, 4, 5, 6, 7, 8, 9)
+
+function restParam (...arg) {
+    // console.log(arg);
+    for (const num of arg) {
+        console.log(num * 2)
+    }
+}
+
+restParam(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+// Rest Parameter in an anonymous function
+const anonymousRest = function (...arg) {
+    for (const num of arg) {
+        console.log(num * 3);
+    }
+}
+anonymousRest(3, 6, 9, 12, 15);
+
+const arrowRest = (...arg) => {
+    for (const num of arg) {
+        console.log(num + 2);
+    }
+}
+arrowRest(1, 2, 3, 4, 5, 6, 7, 8);
+
+const randomArrow = (num) => num * num
+const res = randomArrow(10)
+console.log(res)
+
+
 // Anonymous funtions: They are funtions without names. To call them, store them in a variable
 // This is a function expression: storing the nameless function in a variable
 const anonymous = function () {
