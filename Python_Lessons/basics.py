@@ -20,7 +20,7 @@
 # # # first_name = 'Rhoda'
 # # # last_name = 'Oduro-Nyarko'
 # # # career = 'Tech Enthusiast'
-# # # hobby = 'Disturbing my boyfriend and eating Indomie'
+# # # hobby = 'Minding my business'
 
 # # # fruits = ['Apples', 'Orange', 'Banana', 'Grape', 'Guava']
 
