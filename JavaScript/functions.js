@@ -7,6 +7,10 @@ function division(num) {
 
 console.log(division(6))
 
+// Pure Functions
+// Function that returns the same value passed or passes the same value returned
+const pureFunc = (name) => console.log(`Hello ${name}`);
+
 
 // Write a function that adds two numbers and returns the sum
 
